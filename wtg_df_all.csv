@@ -2,7 +2,7 @@
 0,Langford,Bedfordshire,2,10,20,2013,The Co-operative Group,not reported,not reported,england,52.05806,-0.2530556,1,not reported,not reported,united kingdom
 1,Milton Keynes,Buckinghamshire,2,7,14,2010,Your Energy,not reported,Your Energy,england,52.13611,-0.66444,1,Vestas,V90,united kingdom
 2,"White Mill, Coldham",Cambridgeshire,2,7,14,2012,The Co-operative Group,not reported,Ventus VCT plc,england,52.57472,-0.14583,1,REpower,MM82,united kingdom
-3,Coldham,Cambridgeshire,2,8,16,2005,The Co-operative Group,not reported,ScottishPower,england,52.57472,-0.14583,1,not reported,not reported,united kingdom
+3,Coldham,Cambridgeshire,2,8,16,2005,The Co-operative Group,not reported,Scottish Power,england,52.57472,-0.14583,1,not reported,not reported,united kingdom
 4,Glass Moor,Cambridgeshire,2,8,16,2006,Fenland Windfarms Ltd,EDF EN,Fenland Windfarms Ltd,england,52.56833,-0.11139,1,REpower,MM82,united kingdom
 5,Glass Moor 2,Cambridgeshire,2.05,6,12.3,2013,EDF EN,EDF EN,EDF EN,england,52.51,-0.101639,1,Senvion,MM82,united kingdom
 6,McCain Foods,Cambridgeshire,3,3,9,2007,McCains,not reported,not reported,england,52.56111,-0.17222,1,Vestas,V90,united kingdom
@@ -12,7 +12,7 @@
 10,Stags Holt,Cambridgeshire,2,9,18,2007,Wind Prospect,not reported,E.ON Renewables,england,52.57472,-0.14583,1,Vestas,V80,united kingdom
 11,Frodsham,Cheshire,2.65,19,50.35,2017,Peel Wind Power Ltd,not reported,not reported,england,53.29611,-2.75778,1,not reported,not reported,united kingdom
 12,Bears Down,Cornwall,0.6,16,9.6,2001,npower renewables,Innogy,Innogy,england,50.47306,-4.95306,1,Bonus,B600,united kingdom
-13,Carland Cross,Cornwall,2,10,20,1992,RES,B9 Energy,ScottishPower,england,50.35139,-5.03,1,Gamesa,not reported,united kingdom
+13,Carland Cross,Cornwall,2,10,20,1992,RES,B9 Energy,Scottish Power,england,50.35139,-5.03,1,Gamesa,not reported,united kingdom
 14,Cold Northcott,Cornwall,0.3,22,6.8,1993,First Windfarm Holdings Ltd,Cumbria Wind Farms,First Wind Farm Holdings,england,50.63722,-4.51861,1,WEG,MS3-300,united kingdom
 15,Delabole[2],Cornwall,2.3,4,9.2,1991,Windelectric Management Ltd,Windelectric,Good Energy Group plc,england,50.63722,-4.70417,1,Enercon,E-70,united kingdom
 16,Four Burrows,Cornwall,0.3,15,4.5,1998,Ecogen Ltd,RES,RES,england,50.29167,-5.14556,1,Bonus,B300,united kingdom
@@ -63,7 +63,7 @@
 61,Bristol Port,Gloucestershire,2,8,16,2007,Ecotricity,Ecotricity,Ecotricity,england,51.49444,-2.68556,1,Enercon,E82,united kingdom
 62,Little Cheyne Court,Kent,2.3,26,59.8,2009,npower renewables,not reported,not reported,england,50.9625,0.82028,1,Nordex,N90,united kingdom
 63,Caton Moor Repowering,Lancashire,2,8,16,2006,Hainsford Energy,Triodos Renewables,Triodos Renewables,england,54.06083,-2.65694,1,REpower,MM70,united kingdom
-64,Coal Clough,Lancashire,0.4,24,9.6,1992,RES,B9 Energy,"ScottishPower, SWEB, RES",england,53.74861,-2.1675,1,Vestas,WD34,united kingdom
+64,Coal Clough,Lancashire,0.4,24,9.6,1992,RES,B9 Energy,"Scottish Power, SWEB, RES",england,53.74861,-2.1675,1,Vestas,WD34,united kingdom
 65,Scout Moor,Greater Manchester & Lancashire,2.5,26,65,2008,Peel Wind Power Ltd,not reported,Peel Wind Power Ltd,england,53.66694,-2.27389,1,Nordex,N80,united kingdom
 66,WWP Hameldon Hill,Lancashire,1.5,3,4.5,2007,npower renewables,Innogy,Innogy,england,53.78861,-2.16083,1,MD,70/77,united kingdom
 67,Hyndburn,Lancashire,2.05,12,24.6,2012,Energiekontor,not reported,not reported,england,53.71444,-2.38611,1,REpower,MM82,united kingdom
@@ -103,17 +103,17 @@
 101,Hook Moor,West Yorkshire,2.05,5,10.25,2015,Banks Group,not reported,Banks Group,england,53.808694,-1.330306,1,Senvion,MM92,united kingdom
 102,Ovenden Moor,West Yorkshire,2.5,9,22.5,1993,E.ON UK Renewables,E.ON Renewables,Yorkshire Wind Power Ltd,england,53.77417,-1.93472,1,Vestas,WD34,united kingdom
 103,Garves Mountain/Dunloy,Antrim,3,5,15,2009,Your Energy,Engineering Renewables,Garves Wind Farm Ltd,northern ireland,55.26611,-6.443222,1,Vestas,V90,united kingdom
-104,Corkey,County Antrim,0.5,10,5,1994,RES Ltd and B9 Energy,B9 Energy,ScottishPower,northern ireland,55.03333,-6.25667,1,Nordtank,NTK500,united kingdom
-105,Elliot's Hill,County Antrim,0.5,10,5,1995,RES Ltd and B9 Energy,B9 Energy,ScottishPower,northern ireland,54.85,-6.06,1,Vestas,V39,united kingdom
+104,Corkey,County Antrim,0.5,10,5,1994,RES Ltd and B9 Energy,B9 Energy,Scottish Power,northern ireland,55.03333,-6.25667,1,Nordtank,NTK500,united kingdom
+105,Elliot's Hill,County Antrim,0.5,10,5,1995,RES Ltd and B9 Energy,B9 Energy,Scottish Power,northern ireland,54.85,-6.06,1,Vestas,V39,united kingdom
 106,Gruig,County Antrim,2.5,10,25,2009,RES UK & Ireland Ltd,not reported,not reported,northern ireland,55.02556,-6.24944,1,Nordex,N80,united kingdom
-107,Wolf Bog,County Antrim,2,5,10,2007,RES UK & Ireland Ltd,B9 Energy,ScottishPower,northern ireland,54.80306,-6.09417,1,Vestas,V80,united kingdom
-108,Callagheen,County Fermanagh,1.3,13,16.9,2005,RES Ltd and B9 Energy,B9 Energy,ScottishPower,northern ireland,54.43833,-8.00833,1,Siemens,SWT-1.3,united kingdom
+107,Wolf Bog,County Antrim,2,5,10,2007,RES UK & Ireland Ltd,B9 Energy,Scottish Power,northern ireland,54.80306,-6.09417,1,Vestas,V80,united kingdom
+108,Callagheen,County Fermanagh,1.3,13,16.9,2005,RES Ltd and B9 Energy,B9 Energy,Scottish Power,northern ireland,54.43833,-8.00833,1,Siemens,SWT-1.3,united kingdom
 109,Slieve Rushen Repowering,County Fermanagh,3,18,54,2008,Sean Quinn Group,not reported,not reported,northern ireland,54.16,-7.62,1,Vestas,V90,united kingdom
 110,Tappaghan Mountain,County Fermanagh,1.5,13,19.5,2005,Airtricity,GE Wind,Airtricity,northern ireland,54.54806,-7.55389,1,GE,1.5s,united kingdom
 111,Tappaghan Mountain Extension,County Fermanagh,1.5,6,9,2009,SSE Renewables,not reported,not reported,northern ireland,54.54806,-7.55389,1,GE,1.5s,united kingdom
 112,Altahullion Phase I,County Londonderry,1.3,20,26,2003,RES Ltd and B9 Energy,B9 Energy,RES-GEN,northern ireland,54.96,-7.03167,1,Bonus,B1300,united kingdom
 113,Altahullion Phase II,County Londonderry,1.3,9,11.7,2007,RES UK & Ireland Ltd,B9 Energy,RES-GEN,northern ireland,54.96056,-7.03278,1,Siemens,SWT-1.3,united kingdom
-114,Rigged Hill,County Londonderry,0.5,10,5,1995,RES Ltd and B9 Energy,B9 Energy,ScottishPower,northern ireland,55.02167,-6.82028,1,Nordtank,NTK500,united kingdom
+114,Rigged Hill,County Londonderry,0.5,10,5,1995,RES Ltd and B9 Energy,B9 Energy,Scottish Power,northern ireland,55.02167,-6.82028,1,Nordtank,NTK500,united kingdom
 115,Bessy Bell,County Tyrone,0.5,10,5,1995,Column Energy,B9 Energy,E.ON Renewables,northern ireland,54.68,-7.40333,1,Vestas,V39,united kingdom
 116,Bessy Bell Extension,County Tyrone,1.5,6,9,2008,Airtricity,not reported,Airtricity,northern ireland,54.7225,-7.37472,1,GE,1.5s,united kingdom
 117,Bin Mountain,County Tyrone,1.5,6,9,2007,Airtricity,Airtricity,Airtricity,northern ireland,54.705,-7.59111,1,GE,1.5s,united kingdom
@@ -149,9 +149,9 @@
 147,Twinshiels,Aberdeenshire,2.5,10,25,2014,not reported,Eneco,Eneco,scotland,56.843242,-2.398279,1,Nordex,N80,united kingdom
 148,Upper Ardgrain,Aberdeenshire,0.8,3,2.4,2010,not reported,not reported,not reported,scotland,57.40056,-2.0675,1,Enercon,E48,united kingdom
 149,Ardkinglas/ Clachan Flats,Argyll & Bute,1.67,9,15.03,2009,Scottish Power,not reported,Iberdrola,scotland,56.28778,-4.94861,1,Ecotecnia,74,united kingdom
-150,Beinn an Tuirc,Argyll & Bute,0.66,46,30,2001,Scottish Power,B9 Energy,ScottishPower,scotland,55.56556,-5.57,1,Vestas,V47,united kingdom
+150,Beinn an Tuirc,Argyll & Bute,0.66,46,30,2001,Scottish Power,B9 Energy,Scottish Power,scotland,55.56556,-5.57,1,Vestas,V47,united kingdom
 151,Beinn Ghlas,Argyll & Bute,0.6,14,8.4,1999,npower renewables,Innogy,Beaufort Wind Limited,scotland,56.38306,-5.27222,1,Bonus,B600,united kingdom
-152,Cruach Mhor,Argyll & Bute,0.85,35,29.75,2004,Scottish Power,B9 Energy,ScottishPower,scotland,56.04,-5.15611,1,Vestas,V52,united kingdom
+152,Cruach Mhor,Argyll & Bute,0.85,35,29.75,2004,Scottish Power,B9 Energy,Scottish Power,scotland,56.04,-5.15611,1,Vestas,V52,united kingdom
 153,Deucheran Hill,Argyll & Bute,1.75,9,15.75,2001,E.ON UK Renewables,B9 Energy,E.ON Renewables,scotland,55.62889,-5.55972,1,Vestas,V66,united kingdom
 154,Tangy,Argyll & Bute,0.85,22,18.65,2002,SSE plc,SSE plc,SSE plc,scotland,55.49389,-5.67917,1,Vestas,V52,united kingdom
 155,Artfield Fell,Dumfries & Galloway,1.3,15,19.5,2005,SSE plc,SSE plc,SSE plc,scotland,54.96611,-4.76639,1,Siemens,SWT-1.3,united kingdom
@@ -159,15 +159,15 @@
 157,"Dalswinton, Pennyland Moor",Dumfries & Galloway,2,15,30,2008,Airtricity,not reported,Airtricity,scotland,55.17028,-3.67361,1,REpower,MM82,united kingdom
 158,Minsca,Dumfries & Galloway,2.3,16,36.8,2008,Airtricity,not reported,Airtricity,scotland,55.11278,-3.21639,1,Siemens,SWT-2.3,united kingdom
 159,North Rhins,Dumfries & Galloway,2,11,22,2010,Wind Energy (North Rhins) Ltd,not reported,AES Wind Generation,scotland,54.88194,-5.08333,1,Vestas,V80,united kingdom
-160,Wether Hill,Dumfries & Galloway,1.3,14,18.2,2007,Scottish Power,not reported,ScottishPower,scotland,55.22222,-4.04167,1,Siemens,SWT-1.3,united kingdom
+160,Wether Hill,Dumfries & Galloway,1.3,14,18.2,2007,Scottish Power,not reported,Scottish Power,scotland,55.22222,-4.04167,1,Siemens,SWT-1.3,united kingdom
 161,Windy Standard,Dumfries & Galloway,0.6,36,21.6,1996,npower renewables,Innogy,Innogy,scotland,55.29194,-4.205,1,Nordtank,NTK600,united kingdom
 162,Michelin Tyre Factory,Dundee City,2,2,4,2006,Ecotricity,Ecotricity,Ecotricity,scotland,56.48306,-2.89222,1,Enercon,E70,united kingdom
-163,Hare Hill,East Ayrshire,0.66,20,13.2,2000,Scottish Power,B9 Energy,ScottishPower,scotland,55.35167,-4.11778,1,Vestas,V47,united kingdom
+163,Hare Hill,East Ayrshire,0.66,20,13.2,2000,Scottish Power,B9 Energy,Scottish Power,scotland,55.35167,-4.11778,1,Vestas,V47,united kingdom
 164,Myres Hill,East Renfrewshire,0.95,2,1.9,2001,Vestas,NEG Micon UK,not reported,scotland,55.69167,-4.27833,1,Micon,NM52,united kingdom
-165,"Whitelee,[5] Eaglesham Moor",East Renfrewshire,2.3,215,539,2009,Scottish Power,not reported,ScottishPower,scotland,55.68722,-4.22861,1,Siemens,SWT-2.3,united kingdom
+165,"Whitelee,[5] Eaglesham Moor",East Renfrewshire,2.3,215,539,2009,Scottish Power,not reported,Scottish Power,scotland,55.68722,-4.22861,1,Siemens,SWT-2.3,united kingdom
 166,"Achairn Farm, Stirkoke",Highland,2.05,3,6.15,2009,Innes (James & Ronald),not reported,not reported,scotland,58.43722,-3.19194,1,REpower,MM82,united kingdom
 167,Achany Estate,Highland,2,19,38,2010,SSE plc,not reported,not reported,scotland,58.00444,-4.53167,1,REpower,MM82,united kingdom
-168,Beinn Tharsuinn,Highland,1.75,17,29.75,2006,Scottish Power,not reported,ScottishPower,scotland,57.80167,-4.33222,1,Vestas,V66,united kingdom
+168,Beinn Tharsuinn,Highland,1.75,17,29.75,2006,Scottish Power,not reported,Scottish Power,scotland,57.80167,-4.33222,1,Vestas,V66,united kingdom
 169,Beinn Tharsuinn Extension,Highland,2.3,2,4.6,2009,RockBySea & Midfern Renewables,not reported,not reported,scotland,57.80167,-4.33222,1,Enercon,E70,united kingdom
 170,Ben Aketil,Highland,2.3,10,23,2007,RDC,Falck Renewables,Falck Renewables,scotland,57.42917,-6.455,1,Enercon,E70,united kingdom
 171,Ben Aketil Extension,Highland,2.3,2,4.6,2010,Falck Renewables,not reported,Falck Renewables,scotland,57.42722,-6.44861,1,Enercon,E70,united kingdom
@@ -191,13 +191,13 @@
 189,Rothes (Cairn Uish),Moray,2.3,22,50.6,2005,Fred Olsen Renewables,Natural Power/Fred Olsen,Fred Olsen Renewables Ltd,scotland,57.53722,-3.37139,1,Bonus,B2300,united kingdom
 190,Ardrossan,North Ayrshire,2,12,24,2004,Airtricity,Infinis,Infinis,scotland,55.68583,-4.80722,1,Vestas,V80,united kingdom
 191,Ardrossan Extension,North Ayrshire,2,3,6,2004,Infinis,Infinis,not reported,scotland,55.68583,-4.80722,1,Vestas,V80,united kingdom
-192,Hagshaw Hill Extension,North Lanarkshire,1.3,20,26,2008,Scottish Power,not reported,ScottishPower,scotland,55.55611,-3.90083,1,Siemens,SWT-1.3,united kingdom
+192,Hagshaw Hill Extension,North Lanarkshire,1.3,20,26,2008,Scottish Power,not reported,Scottish Power,scotland,55.55611,-3.90083,1,Siemens,SWT-1.3,united kingdom
 193,Bu Farm,Orkney,0.9,3,2.7,2002,Farm Energy,I & H Brown,I & H Brown,scotland,59.08306,-2.66472,1,Wind,900S,united kingdom
 194,Burgar Hill,Orkney,2.5,2,5,2007,npower renewables,Innogy,Innogy,scotland,59.12028,-3.14583,1,Nordex,N80,united kingdom
 195,Hammars Hill,Orkney,0.9,5,4.5,2010,Hammars Hill Energy Ltd,not reported,not reported,scotland,59.09472,-3.07528,1,Enercon,E44,united kingdom
 196,Spurness Wind Farm,Orkney,2.75,3,8.25,2005,Your Energy,not reported,SSE plc,scotland,59.18611,-2.68944,1,Micon,NM80,united kingdom
 197,Drumderg,Perth & Kinross,2.3,16,36.8,2008,SSE plc,not reported,not reported,scotland,56.67944,-3.35639,1,Siemens,SWT-2.3,united kingdom
-198,Green Knowes,Perth & Kinross,1.5,18,27,2008,Scottish Power,not reported,ScottishPower,scotland,56.24889,-3.66694,1,Acciona,AW1500,united kingdom
+198,Green Knowes,Perth & Kinross,1.5,18,27,2008,Scottish Power,not reported,Scottish Power,scotland,56.24889,-3.66694,1,Acciona,AW1500,united kingdom
 199,Toddleburn,Scottish Borders,2.3,12,27.6,2010,SSE Renewables,not reported,SSE Renewables,scotland,55.77222,-2.80667,1,Siemens,SWT-2.3,united kingdom
 200,Black Hill,Scottish Borders,1.3,22,28.6,2007,RES,not reported,RES,scotland,55.79833,-2.43389,1,Siemens,SWT-1.3,united kingdom
 201,Bowbeat,Scottish Borders,1.3,24,31.2,2002,E.ON UK Renewables,E.ON Renewables,E.ON Renewables,scotland,55.71556,-3.13972,1,Nordex,N60,united kingdom
@@ -205,17 +205,17 @@
 203,Crystal Rig,Scottish Borders,2.5,20,50,2004,Fred Olsen Renewables,Natural Power/Fred Olsen,Fred Olsen Renewables Ltd,scotland,55.895,-2.51306,1,Nordex,N80,united kingdom
 204,Crystal Rig1a,Scottish Borders,2.5,5,12.5,2007,Fred Olsen Renewables,not reported,Fred Olsen Renewables Ltd,scotland,55.895,-2.51306,1,Nordex,N80,united kingdom
 205,Crystal Rig2 & 2a,Scottish Borders,2.3,60,138,2010,Fred Olsen Renewables,Natural Power/Fred Olsen,Fred Olsen Renewables Ltd,scotland,55.90556,-2.55,1,Siemens,SWT-2.3,united kingdom
-206,Dun Law,Scottish Borders,0.66,26,17.6,2000,Scottish Power,B9 Energy,ScottishPower,scotland,55.8075,-2.86028,1,Vestas,V47,united kingdom
-207,Dun Law Extension,Scottish Borders,0.85,35,29.75,2009,RES,not reported,ScottishPower,scotland,55.8075,-2.86028,1,Vestas,V52,united kingdom
+206,Dun Law,Scottish Borders,0.66,26,17.6,2000,Scottish Power,B9 Energy,Scottish Power,scotland,55.8075,-2.86028,1,Vestas,V47,united kingdom
+207,Dun Law Extension,Scottish Borders,0.85,35,29.75,2009,RES,not reported,Scottish Power,scotland,55.8075,-2.86028,1,Vestas,V52,united kingdom
 208,Longpark,Scottish Borders,2,19,38,2009,Wind Prospect,Cumbria Wind Farms,EDF EN,scotland,55.67306,-2.83639,1,REpower,MM82,united kingdom
 209,Burradale Phase 1,Shetland Islands,0.66,3,1.98,2000,Shetland Aerogenerators,Shetland Aerogenerators Ltd,Shetland Aerogenerators,scotland,60.16472,-1.23611,1,Vestas,V47,united kingdom
 210,Burradale Phase 2,Shetland Islands,0.85,2,1.7,2003,Shetland Aerogenerators,Shetland Aerogenerators Ltd,Shetland Aerogenerators,scotland,60.16472,-1.23611,1,Vestas,V52,united kingdom
-211,Arecleoch,South Ayrshire,2,60,120,2011,not reported,Scottish Power,ScottishPower Renewables,scotland,55.05333,-4.88222,1,Gamesa,G80,united kingdom
+211,Arecleoch,South Ayrshire,2,60,120,2011,not reported,Scottish Power,Scottish Power Renewables,scotland,55.05333,-4.88222,1,Gamesa,G80,united kingdom
 212,"Hadyard Hill, Barr",South Ayrshire,2.3,52,120,2006,SSE plc,SSE plc,SSE plc,scotland,55.24583,-4.72306,1,Bonus,B2300,united kingdom
-213,Black Law Phase I,South Lanarkshire,2.3,44,97,2005,Scottish Power,not reported,ScottishPower,scotland,55.76694,-3.73889,1,Siemens,SWT-2.3,united kingdom
-214,Black Law Phase II,South Lanarkshire,2.3,12,27.6,2006,Scottish Power,not reported,ScottishPower,scotland,55.76694,-3.73889,1,Siemens,SWT-2.3,united kingdom
+213,Black Law Phase I,South Lanarkshire,2.3,44,97,2005,Scottish Power,not reported,Scottish Power,scotland,55.76694,-3.73889,1,Siemens,SWT-2.3,united kingdom
+214,Black Law Phase II,South Lanarkshire,2.3,12,27.6,2006,Scottish Power,not reported,Scottish Power,scotland,55.76694,-3.73889,1,Siemens,SWT-2.3,united kingdom
 215,Greendykeside Wind Farm,South Lanarkshire,2,2,4,2007,A7 Energy Ltd,Wind Prospect,not reported,scotland,55.90833,-3.90194,1,REpower,MM82,united kingdom
-216,Hagshaw Hill,South Lanarkshire,0.6,26,15.6,1995,Eurus Energy/Ecogen Ltd,Ingenco,ScottishPower,scotland,55.55056,-3.91833,1,Bonus,B600,united kingdom
+216,Hagshaw Hill,South Lanarkshire,0.6,26,15.6,1995,Eurus Energy/Ecogen Ltd,Ingenco,Scottish Power,scotland,55.55056,-3.91833,1,Bonus,B600,united kingdom
 217,Lochhead Farm,South Lanarkshire,2.05,3,6.15,2009,A7 Energy Ltd,not reported,not reported,scotland,55.70472,-3.94611,1,REpower,MM82,united kingdom
 218,Braes of Doune,Stirling,2,36,72,2007,Airtricity,not reported,Airtricity/Centrica,scotland,56.27611,-4.0625,1,Vestas,V80,united kingdom
 219,Burnfoot Hill,Stirling,2,13,26,2010,Wind Prospect,EDF EN,not reported,scotland,56.21139,-3.76694,1,REpower,MM82,united kingdom

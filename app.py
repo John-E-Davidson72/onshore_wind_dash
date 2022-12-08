@@ -3,9 +3,10 @@ from dash import dcc
 from dash import html
 import pandas as pd
 import numpy as np
-from dash.dependencies import Output, Input
+from dash.dependencies import Output, Input, State
 import plotly.express as px
 import plotly.graph_objects as go
+from dash.exceptions import PreventUpdate
 
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
@@ -44,76 +45,6 @@ app.layout = html.Div(
             id="navbar",
         ),
         html.Div(
-            [
-                dcc.RangeSlider(
-                    date_min, date_max, 1, value=[date_min, date_max], id="date-slider"
-                ),
-            ],
-            id="date_slider",
-        ),
-        html.Div(
-            [
-                dcc.Dropdown(
-                    options=[
-                        {"label": Developer, "value": Developer}
-                        for Developer in np.sort(df.Developer.unique())
-                    ],
-                    value=df.Developer[127],
-                    multi=True,
-                    id="developer",
-                    clearable=True,
-                )
-            ],
-            id="drop-container-1",
-        ),
-        html.Div(
-            [
-                dcc.Dropdown(
-                    options=[
-                        {"label": Operator, "value": Operator}
-                        for Operator in np.sort(df.Operator.unique())
-                    ],
-                    value=df.Operator[127],
-                    multi=True,
-                    id="operator",
-                    clearable=True,
-                )
-            ],
-            id="drop-container-2",
-        ),
-        html.Div(
-            [
-                dcc.Dropdown(
-                    options=[
-                        {"label": Owner, "value": Owner}
-                        for Owner in np.sort(df.Owner.unique())
-                    ],
-                    value=df.Owner[127],
-                    multi=True,
-                    id="owner",
-                    clearable=True,
-                )
-            ],
-            id="drop-container-3",
-        ),
-        html.Div(
-            [
-                dcc.Dropdown(
-                    options=[
-                        {"label": turbine_manufacturer, "value": turbine_manufacturer}
-                        for turbine_manufacturer in np.sort(
-                            df.turbine_manufacturer.unique()
-                        )
-                    ],
-                    value=df.turbine_manufacturer[127],
-                    multi=True,
-                    id="manufacturer",
-                    clearable=True,
-                )
-            ],
-            id="drop-container-4",
-        ),
-        html.Div(
             [dcc.Graph(id="wf-count", className="card")],
             id="card-1",
         ),
@@ -126,13 +57,54 @@ app.layout = html.Div(
             id="card-3",
         ),
         html.Div(
-            [dcc.Graph(id="map")],
+            [
+                dcc.Dropdown(
+                    id="category-dropdown",
+                    options=list(
+                        df[
+                            [
+                                "Developer",
+                                "Operator",
+                                "Owner",
+                                "turbine_manufacturer",
+                                "County",
+                                "country",
+                                "state",
+                            ]
+                        ]
+                    ),
+                    value="state",
+                    clearable=False,
+                )
+            ],
+            id="drop-container-1",
+        ),
+        html.Div(
+            [
+                dcc.Dropdown(
+                    multi=False,
+                    id="selection-dropdown",
+                    clearable=False,
+                )
+            ],
+            id="drop-container-2",
+        ),
+        html.Div(
+            [
+                dcc.RangeSlider(
+                    date_min, date_max, 1, value=[date_min, date_max], id="date-slider"
+                ),
+            ],
+            id="date_slider",
+        ),
+        html.Div(
+            [dcc.Graph(id="map", className="map-vis")],
             id="map-cont",
         ),
         html.Div(
-            [dcc.Graph(id="bar-main")],
+            [dcc.Graph(id="bar-main", className="wf-bar")],
             id="wfarms",
-            style={"overflowY": "scroll", "height": "1000"},
+            style={"overflow": "scroll", "maxHeight": "800px"},
         ),
         html.Div([dcc.Graph(id="pie-country", className="donut")], id="donut-1"),
         html.Div([dcc.Graph(id="pie-operator", className="donut")], id="donut-2"),
@@ -141,6 +113,20 @@ app.layout = html.Div(
     ],
     id="container",
 )
+
+
+@app.callback(
+    Output("selection-dropdown", "options"), [Input("category-dropdown", "value")]
+)
+def set_selection_options(selected_category):
+    return [{"label": i, "value": i} for i in np.sort(df[selected_category].unique())]
+
+
+@app.callback(
+    Output("selection-dropdown", "value"), [Input("selection-dropdown", "options")]
+)
+def set_selection_value(available_options):
+    return "united kingdom"
 
 
 @app.callback(
@@ -156,27 +142,15 @@ app.layout = html.Div(
         Output("line-date", "figure"),
     ],
     [
-        Input("developer", "value"),
-        Input("operator", "value"),
-        Input("owner", "value"),
-        Input("manufacturer", "value"),
+        Input("selection-dropdown", "value"),
+        Input("category-dropdown", "value"),
         Input("date-slider", "value"),
     ],
 )
-def update_charts(
-    selected_dev,
-    selected_op,
-    selected_owner,
-    selected_manuf,
-    selected_dates,
-):
-    mask_main = (
-        (df.Developer == selected_dev)
-        & (df.Operator == selected_op)
-        & (df.Owner == selected_owner)
-        & (df.turbine_manufacturer == selected_manuf)
-    )
-    filtered_data = df.loc[mask_main, :]
+def update_charts(selected_category, selection, selected_dates):
+
+    filtered_data = df[df[selection] == selected_category]
+
     count = len(filtered_data)
     WtgTotal = filtered_data["No."].sum()
     instCap = filtered_data["Cap. (MW)"].sum() / 1000
@@ -204,7 +178,7 @@ def update_charts(
             mode="number",
             value=instCap,
             title={"text": "Installed Capacity", "font": {"size": 20}},
-            number={"font": {"size": 50}},
+            number={"font": {"size": 50}, "suffix": "GW"},
         )
     )
 
@@ -271,10 +245,14 @@ def update_charts(
             "state": False,
         },
         orientation="h",
-        width=10,
+        # width=10,
         labels={"Wind farm": "Wind farm name", "Cap. (MW)": "Installed Capacity (MW)"},
         color_discrete_sequence=px.colors.qualitative.G10,
     )
+
+    figBarWf.update_layout(autosize=False, height=800)
+    figBarWf.update_traces(width=1)
+    figBarWf.update_xaxes(ticksuffix="  ")
 
     figPieMwC = px.pie(
         filtered_data,
@@ -309,7 +287,7 @@ def update_charts(
     figPieManuf.update_traces(textinfo="value", textposition="inside")
     figPieManuf.update_layout(margin=dict(l=0, r=0, t=50, b=0))
 
-    figOnline = px.line(
+    figOnline = px.bar(
         filtered_data_date, x="Online", y="wf_count", title="Wind Farms online by year"
     )
 
