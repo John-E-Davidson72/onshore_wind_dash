@@ -3,22 +3,14 @@ from dash import dcc
 from dash import html
 import pandas as pd
 import numpy as np
-from dash.dependencies import Output, Input, State
+from dash.dependencies import Output, Input
 import plotly.express as px
 import plotly.graph_objects as go
-from dash.exceptions import PreventUpdate
 
 import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 
-# import json
-
 df = pd.read_csv("wtg_df_all.csv")
-# df_date = df.groupby("Online")["wf_count"].count()  # MOVE TO FILTERED DATA
-# df_date = df_date.to_frame()
-# df_date = df_date.reset_index()
-# date_min = df_date["Online"].min()
-# date_max = df_date["Online"].max()
 
 app = dash.Dash(
     __name__,
@@ -83,15 +75,15 @@ app.layout = html.Div(
                                 "Developer",
                                 "Operator",
                                 "Owner",
-                                "turbine_manufacturer",
-                                "County",
-                                "country",
-                                "state",
-                                "Online",
+                                "Turbine Manufacturer",
+                                "Region",
+                                "Country",
+                                "State",
+                                "Year Online",
                             ]
                         ]
                     ),
-                    value="state",
+                    value="State",
                     clearable=False,
                 )
             ],
@@ -107,14 +99,6 @@ app.layout = html.Div(
             ],
             id="drop-container-2",
         ),
-        # html.Div(
-        # [
-        # dcc.RangeSlider(
-        # date_min, date_max, 1, value=[date_min, date_max], id="date-slider"
-        # ),
-        # ],
-        # id="date_slider",
-        # ),
         html.Div(
             [dcc.Graph(id="map", className="map-vis")],
             id="map-cont",
@@ -176,7 +160,7 @@ def set_selection_options(selected_category):
     Output("selection-dropdown", "value"), [Input("selection-dropdown", "options")]
 )
 def set_selection_value(available_options):
-    return "united kingdom"
+    return "United Kingdom"
 
 
 @app.callback(
@@ -194,29 +178,15 @@ def set_selection_value(available_options):
     [
         Input("selection-dropdown", "value"),
         Input("category-dropdown", "value"),
-        # Input("date-slider", "value"),
     ],
 )
-
-# def update_charts(selected_category, selection, selected_dates):
-
-
 def update_charts(selected_category, selection):
 
     filtered_data = df[df[selection] == selected_category]
 
     count = len(filtered_data)
-    WtgTotal = filtered_data["No."].sum()
-    instCap = filtered_data["Cap. (MW)"].sum() / 1000
-
-    # df_fil_date = filtered_data.groupby("Online")["wf_count"].count()
-    # df_fil_date = df_fil_date.to_frame()
-    # df_fil_date = df_fil_date.reset_index()
-
-    # mask_date = (df_fil_date.Online >= selected_dates[0]) & (
-    # df_fil_date.Online <= selected_dates[1]
-    # )
-    # filtered_data_date = df_fil_date.loc[mask_date, :]
+    WtgTotal = filtered_data["No. Turbines Installed"].sum()
+    instCap = filtered_data["Installed Capacity (MW)"].sum() / 1000
 
     figWfCount = go.Figure(
         go.Indicator(
@@ -261,19 +231,17 @@ def update_charts(selected_category, selection):
         filtered_data,
         lat="lat",
         lon="long",
-        hover_name="Wind farm",
+        hover_name="Wind Farm",
         hover_data=[
-            "Cap. (MW)",
+            "Installed Capacity (MW)",
             "Developer",
             "Operator",
             "Owner",
-            "Online",
-            "turbine_manufacturer",
+            "Year Online",
+            "Turbine Manufacturer",
         ],
-        color="Cap. (MW)",
-        # size="Cap. (MW)",
-        color_continuous_scale=px.colors.sequential.Rainbow
-        # color_discrete_sequence=["green"],
+        color="Installed Capacity (MW)",
+        color_continuous_scale=px.colors.sequential.Rainbow,
     )
 
     figMap.update_layout(
@@ -285,34 +253,37 @@ def update_charts(selected_category, selection):
 
     figMap.update_traces(marker={"size": 10})
 
+    figMap.update_coloraxes(colorbar_title_side="right")
+
     figBarWf = px.bar(
         filtered_data,
-        x="Cap. (MW)",
-        y="Wind farm",
-        color="country",
+        x="Installed Capacity (MW)",
+        y="Wind Farm",
+        color="Country",
         title="Cap (MW) by Wind Farm",
-        hover_name="Wind farm",
+        hover_name="Wind Farm",
         hover_data={
-            "Wind farm": False,
-            "Power per turbine (MW)": True,
-            "No.": True,
-            "Cap. (MW)": True,
-            "Online": True,
+            "Wind Farm": False,
+            "Power per Turbine (MW)": True,
+            "No. Turbines Installed": True,
+            "Installed Capacity (MW)": True,
+            "Year Online": True,
             "Developer": True,
             "Operator": True,
             "Owner": True,
-            "country": True,
+            "Country": True,
             "lat": False,
             "long": False,
-            "wf_count": False,
-            "turbine_manufacturer": True,
-            "turbine_model": True,
-            "state": False,
+            "Wind Farm count": False,
+            "Turbine Manufacturer": True,
+            "Turbine Model": True,
+            "State": False,
         },
         orientation="h",
-        # width=10,
-        labels={"Wind farm": "Wind farm name", "Cap. (MW)": "Installed Capacity (MW)"},
-        # color_discrete_sequence=px.colors.qualitative.G10,
+        labels={
+            "Wind Farm": "Wind Farm name",
+            "Installed Capacity (MW)": "Installed Capacity (MW)",
+        },
     )
 
     barWfHeight = len(filtered_data) * 30
@@ -334,28 +305,25 @@ def update_charts(selected_category, selection):
 
     figPieMwC = px.pie(
         filtered_data,
-        values="Cap. (MW)",
-        names="country",
-        title="Cap. (MW) by country",
+        values="Installed Capacity (MW)",
+        names="Country",
+        title="Installed Capacity (MW) by Country",
         hole=0.5,
-        color="country",
+        color="Country",
         # color_discrete_sequence=px.colors.qualitative.G10,
         color_discrete_map={
-            "scotland": "#3366CC",
-            "england": "#DC3912",
-            "wales": "#109618",
-            "northern ireland": "#FF9900",
+            "Scotland": "#3366CC",
+            "England": "#DC3912",
+            "Wales": "#109618",
+            "Northern Ireland": "#FF9900",
         },
-        # category_orders={
-        # "country": ["scotland", "england", "wales", "northern ireland"]
-        # },
     )
     figPieMwC.update_traces(textinfo="value", textposition="inside")
     figPieMwC.update_layout(margin=dict(l=0, r=0, t=50, b=0))
 
     figPieWfC = px.pie(
         filtered_data,
-        values="wf_count",
+        values="Wind Farm count",
         names="Operator",
         title="Wind Farm count by Operator",
         hole=0.5,
@@ -366,37 +334,36 @@ def update_charts(selected_category, selection):
 
     figPieManuf = px.pie(
         filtered_data,
-        values="No.",
-        names="turbine_manufacturer",
+        values="No. Turbines Installed",
+        names="Turbine Manufacturer",
         title="Installed Turbines",
-        color="turbine_manufacturer",
+        color="Turbine Manufacturer",
         hole=0.5,
         color_discrete_sequence=px.colors.qualitative.Plotly,
     )
     figPieManuf.update_traces(textinfo="value", textposition="inside")
     figPieManuf.update_layout(margin=dict(l=0, r=0, t=50, b=0))
 
-    figOnline = px.bar(
+    figYear = px.bar(
         filtered_data,
-        x="Online",
-        y="wf_count",
-        color="country",
-        title="Wind Farms online by year",
-        hover_name="Wind farm",
+        x="Year Online",
+        y="Wind Farm count",
+        color="Country",
+        title="Wind Farms Online by year",
+        hover_name="Wind Farm",
         # color_discrete_sequence=px.colors.qualitative.G10,
         color_discrete_map={
-            "scotland": "#3366CC",
-            "england": "#DC3912",
-            "wales": "#109618",
-            "northern ireland": "#FF9900",
+            "Scotland": "#3366CC",
+            "England": "#DC3912",
+            "Wales": "#109618",
+            "Northern Ireland": "#FF9900",
         },
     )
-    figOnline.update_layout(
+    figYear.update_layout(
         showlegend=True,
         yaxis=dict(tickmode="linear", tick0=1, dtick=1),
     )
-    # figOnline.update_traces(marker_color="green")
-    figOnline.update_xaxes(type="category", categoryorder="category ascending")
+    figYear.update_xaxes(type="category", categoryorder="category ascending")
 
     return (
         figWfCount,
@@ -407,7 +374,7 @@ def update_charts(selected_category, selection):
         figPieMwC,
         figPieWfC,
         figPieManuf,
-        figOnline,
+        figYear,
     )
 
 
