@@ -172,3 +172,7 @@ body {
   margin-top: 10px;
   margin-left: 70px;
 }
+
+.modebar {
+  display: none !important;
+}
